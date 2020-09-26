@@ -54,9 +54,9 @@ const styles = StyleSheet.create({
     // borderColor: 'red',
     // borderWidth: 10,
     justifyContent: 'center',
-    // flex: 1,
-    // marginBottom: 100,
-    marginVertical: 50,
+    flex: 1,
+    marginBottom: 100,
+    // marginVertical: 50,
   },
   errorMessage: {
     fontSize: 16,
