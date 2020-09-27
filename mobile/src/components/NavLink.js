@@ -15,8 +15,8 @@ const NavLink = ({ navigation, text, routeName }) => {
 
 const styles = StyleSheet.create({
   link: {
-    color: 'blue',
-  },
+    color: 'blue'
+  }
 });
 
 export default withNavigation(NavLink);

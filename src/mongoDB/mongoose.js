@@ -1,18 +1,16 @@
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
-module.exports = () => {
-  mongoose.connect(keys.mongoURI, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-  });
-
-  mongoose.connection.on('connected', () => {
+module.exports = async () => {
+  try {
+    await mongoose.connect(keys.mongoURI, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useUnifiedTopology: true,
+    });
     console.log('Connected to mongo instance');
-  });
-
-  mongoose.connection.on('error', (error) => {
-    console.error('Error connecting to mongo', error);
-  });
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
 };

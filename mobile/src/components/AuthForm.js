@@ -24,8 +24,8 @@ const AuthForm = ({ headerText, errorMessage, onSubmit, submitButtonText }) => {
       <Input
         secureTextEntry
         label='Password'
-        leftIcon={{ name: 'lock' }}
         value={password}
+        leftIcon={{ name: 'lock' }}
         onChangeText={setPassword}
         autoCapitalize='none'
         autoCorrect={false}
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'red',
     marginLeft: 15,
-    marginTop: 15
-  }
+    marginTop: 15,
+  },
 });
 
 export default AuthForm;
