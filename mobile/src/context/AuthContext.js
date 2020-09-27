@@ -1,4 +1,4 @@
-import AsyncStorage from '@react-native-community/async-storage';
+import { AsyncStorage } from 'react-native';
 import createDataContext from './createDataContext';
 import trackerApi from '../api/tracker';
 import { navigate } from '../navigationRef';
@@ -20,9 +20,9 @@ const tryLocalSignin = (dispatch) => async () => {
   const token = await AsyncStorage.getItem('token');
   if (token) {
     dispatch({ type: 'signin', payload: token });
-    navigate('TrackListScreen');
+    navigate('TrackList');
   } else {
-    navigate('loginFlow');
+    navigate('Signup');
   }
 };
 
